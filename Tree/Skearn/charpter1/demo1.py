@@ -19,7 +19,7 @@ from sklearn.linear_model import SGDRegressor
 boston = load_iris()
 regressor = DecisionTreeRegressor(random_state=0)
 # 使用负的均方误差作为评分指标
-s = cross_val_score(regressor, boston.data, boston.target, cv=10,scoring='neg_mean_squared_error')
+s = cross_val_score(regressor, boston.data, boston.target, cv=10, scoring='neg_mean_squared_error')
 print(boston.data)
 print(boston.data.shape)
 print(s)
